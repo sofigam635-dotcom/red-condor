@@ -18,4 +18,4 @@
 - **Mosquitto**: Broker MQTT popular, liviano y confiable. Se instala en Docker.
 - **Node-RED**: Herramienta de flujos visuales (low-code). Recibe datos MQTT, procesa (reglas de alerta), guarda en InfluxDB y envía notificaciones (email, Telegram). Perfecto para lógica de emergencia.
 
-**Fuentes principales**: Documentación oficial (InfluxData, Grafana, Node-RED), tutoriales IoT con ESP32/LoRa y casos de uso en monitoreo remoto.<grok-card data-id="5ccccb" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card>
+**Fuentes principales**: Documentación oficial (InfluxData, Grafana, Node-RED), tutoriales IoT con ESP32/LoRa y casos de uso en monitoreo remoto.
