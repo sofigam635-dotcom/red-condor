@@ -19,6 +19,3 @@
 - **Node-RED**: Herramienta de flujos visuales (low-code). Recibe datos MQTT, procesa (reglas de alerta), guarda en InfluxDB y envía notificaciones (email, Telegram). Perfecto para lógica de emergencia.
 
 **Fuentes principales**: Documentación oficial (InfluxData, Grafana, Node-RED), tutoriales IoT con ESP32/LoRa y casos de uso en monitoreo remoto.<grok-card data-id="5ccccb" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card>
-
-**Conclusión para Red Cóndor**: Stack completo open-source: Meshtastic → MQTT (Mosquitto) → Node-RED → InfluxDB → Grafana. Resiliente (modo offline) y educativo (estudiantes aprenden Docker, Linux, flujos).
-
