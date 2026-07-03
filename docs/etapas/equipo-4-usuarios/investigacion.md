@@ -14,6 +14,23 @@ Su estilo de vida se caracteriza por la trashumancia, que consiste en trasladar 
  
 Las familias de puesteros suelen vivir en parajes alejados del centro urbano.
 
+**TIEMPO QUE ESTAN EN VERANADA**
+
+Los crianceros y puesteros trashumantes de Malargüe pueden pasar hasta 4 a 6 meses seguidos en la alta montaña sin bajar a la ciudad durante la temporada de verano.
+
+**COMUNICACIÓN**
+     
+   _Sus principales metodos son:
+
+Radios de Comunicación (VHF / UHF)(alertas meteorológicas)
+
+Radios AM/FM
+
+Telefonía satelital
+
+Telefonía movil(WhatsApp)
+esta es solocon señal.
+
 **AREA DE LOS PUESTOS**
 
 Área del Río Grande y Ruta Provincial 186: Camino hacia la zona de La Payunia y la Laguna Cari Lauquen.
@@ -25,3 +42,15 @@ Distrito Río Barrancas: En la zona limítrofe suroeste.
 Agua Escondida: Hacia el este, en zonas de llanura y monte.
 
 Valle Hermoso: Utilizados principalmente como "veranadas" durante el verano.
+
+
+
+**Rescate en Alta Montaña y Zonas RuralesGendarmería Nacional (GEAM):**
+
+El Grupo Especial de Alta Montaña, perteneciente al Escuadrón 29 "Malargüe", es el principal respondiente en el territorio cordillerano. Intervienen a pie, a caballo o con vehículos especiales para evacuar puesteros, docentes o turistas aislados por temporales de nieve en rutas y parajes alejados.
+
+Patrulla de Rescate de la Policía de Mendoza: Unidad de elite de la fuerza provincial que se despliega activamente hacia el sur mendocino ante grandes contingencias climáticas, misiones de andinismo complejas o evacuaciones en sectores de difícil acceso
+
+**LA RED CONDOR ES UTIL/NECESARIA PORQUE:**
+
+Quiere crear una red rural autónoma de comunicaciones y alertas mediante tecnología LoRa/Meshtastic para zonas de montaña sin cobertura celular. Buscando asistir a puesteros y crianceros aislados mediante nodos móviles con botones de emergencia, GPS y mensajería

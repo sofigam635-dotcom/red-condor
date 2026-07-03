@@ -50,4 +50,23 @@
 
 ## Autonomía y Dimensionamiento
 
-**Fórmula básica de autonomía:**
+## ¿Cómo se calcula la autonomía?
+**Fórmula simple:**  
+Autonomía (días) = Capacidad batería (mAh) ÷ Consumo promedio diario (mAh)
+
+**Ejemplo nodo móvil:**
+- Batería 3000 mAh
+- Consumo promedio 3 mA → ~40 días teóricos  
+- En la práctica: **10-20 días** (con margen de seguridad)
+
+## ¿Qué pasa en días nublados?
+- Sin sol, solo funciona la batería.
+- Se diseña para aguantar **7-14 días** sin recarga.
+- Solución: batería más grande + alerta cuando baja.
+
+## Dimensionamiento Panel + Batería
+- **Repetidor fijo:** Panel 10-20W + Batería LiFePO4 10-20 Ah.
+- **Nodo móvil:** Batería 18650 + power bank 5000-10000 mAh (opcional panel plegable 5W).
+
+**Recomendación:**  
+Usar baterías LiFePO4 (seguras en frío), bajo consumo en firmware y telemetría de batería.

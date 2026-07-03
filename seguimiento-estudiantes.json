@@ -1,0 +1,203 @@
+{
+  "repo": "diocesanosanjose/red-condor",
+  "actualizado": "2026-07-02",
+  "estudiantes": [
+    {
+      "usuario": "luisinafigueroaauza-cloud",
+      "nombre": null,
+      "commits": 12,
+      "pull_requests": [],
+      "forks": [],
+      "issues": [],
+      "ultimo_commit": "2026-07-02T13:32:44Z",
+      "areas_trabajo": [
+        "docs/etapas/equipo-1-comunicaciones/",
+        "docs/etapas/equipo-3-hardware/",
+        "docs/etapas/equipo-4-usuarios/"
+      ]
+    },
+    {
+      "usuario": "riverojuanmartin6-gif",
+      "nombre": null,
+      "commits": 12,
+      "pull_requests": [],
+      "forks": [],
+      "issues": [
+        {"tipo": "comentario", "issue": 1, "accion": "comentó"}
+      ],
+      "ultimo_commit": "2026-06-25T12:20:54Z",
+      "areas_trabajo": [
+        "docs/etapas/equipo-4-usuarios/"
+      ]
+    },
+    {
+      "usuario": "santiagobalverdi20-lang",
+      "nombre": null,
+      "commits": 8,
+      "pull_requests": [],
+      "forks": [],
+      "issues": [
+        {"tipo": "creó", "issue": 1, "titulo": "Problema de la IA"},
+        {"tipo": "creó", "issue": 2, "titulo": "Otro problema de la IA"}
+      ],
+      "ultimo_commit": "2026-07-02T13:20:46Z",
+      "areas_trabajo": [
+        "docs/etapas/equipo-5-infraestructura/"
+      ]
+    },
+    {
+      "usuario": "ailenv006-debug",
+      "nombre": null,
+      "commits": 5,
+      "pull_requests": [],
+      "forks": [],
+      "issues": [
+        {"tipo": "comentario", "issue": 2, "accion": "comentó"}
+      ],
+      "ultimo_commit": "2026-07-02T22:52:43Z",
+      "areas_trabajo": [
+        "docs/etapas/equipo-4-usuarios/"
+      ]
+    },
+    {
+      "usuario": "maguitayasmin1-hash",
+      "nombre": null,
+      "commits": 5,
+      "pull_requests": [],
+      "forks": [],
+      "issues": [],
+      "ultimo_commit": "2026-06-25T11:50:03Z",
+      "areas_trabajo": [
+        "docs/etapas/equipo-3-hardware/"
+      ]
+    },
+    {
+      "usuario": "valentinaguadalupeguzman9-code",
+      "nombre": null,
+      "commits": 2,
+      "pull_requests": [],
+      "forks": [],
+      "issues": [],
+      "ultimo_commit": "2026-06-23T13:22:57Z",
+      "areas_trabajo": [
+        "docs/etapas/equipo-2-energia/"
+      ]
+    },
+    {
+      "usuario": "pardoezequiel810-eng",
+      "nombre": null,
+      "commits": 2,
+      "pull_requests": [],
+      "forks": [],
+      "issues": [],
+      "ultimo_commit": "2026-06-25T11:50:07Z",
+      "areas_trabajo": [
+        "docs/etapas/equipo-2-energia/"
+      ]
+    },
+    {
+      "usuario": "godooylauataro-ai",
+      "nombre": null,
+      "commits": 1,
+      "pull_requests": [],
+      "forks": [],
+      "issues": [],
+      "ultimo_commit": "2026-06-25T11:51:01Z",
+      "areas_trabajo": [
+        "docs/etapas/equipo-1-comunicaciones/"
+      ]
+    },
+    {
+      "usuario": "sofigam635-dotcom",
+      "nombre": "sofi635",
+      "commits": 1,
+      "pull_requests": [
+        {"numero": 6, "titulo": "preguntas abiertas md", "estado": "merged", "creado": "2026-06-25"}
+      ],
+      "forks": ["sofigam635-dotcom/red-condor"],
+      "issues": [],
+      "ultimo_commit": "2026-06-25T11:59:37Z",
+      "areas_trabajo": [
+        "docs/etapas/equipo-5-infraestructura/"
+      ]
+    },
+    {
+      "usuario": "pili848",
+      "nombre": "pili848",
+      "commits": 3,
+      "pull_requests": [
+        {"numero": 3, "titulo": "Ampliar investigación sobre hardware para Red Cóndor", "estado": "open", "creado": "2026-06-23"},
+        {"numero": 4, "titulo": "Actualizar investigación sobre hardware para Red Cóndor", "estado": "open", "creado": "2026-06-23"},
+        {"numero": 5, "titulo": "Expand technical questions for Equipo 3 hardware", "estado": "open", "creado": "2026-06-23"}
+      ],
+      "forks": ["pili848/red-condor"],
+      "issues": [],
+      "ultimo_commit": "2026-06-23T13:46:32Z",
+      "areas_trabajo": [
+        "docs/etapas/equipo-3-hardware/"
+      ]
+    },
+    {
+      "usuario": "juanmartinrdgz-boop",
+      "nombre": null,
+      "commits": 0,
+      "pull_requests": [],
+      "forks": ["juanmartinrdgz-boop/red-condor"],
+      "issues": [],
+      "ultimo_commit": null,
+      "areas_trabajo": []
+    }
+  ],
+  "calidad_commits": {
+    "buenos_commits_descriptivos": ["luisinafigueroaauza-cloud", "santiagobalverdi20-lang", "ailenv006-debug", "maguitayasmin1-hash", "valentinaguadalupeguzman9-code", "pardoezequiel810-eng"],
+    "commits_mejorables": [
+      {"usuario": "riverojuanmartin6-gif", "mensajes": [".", "INVESTIGACION.md", "INVESTIGACION.md", "INVESTIGACION.md", "Update investigacion.md"]},
+      {"usuario": "sofigam635-dotcom", "mensajes": ["preguntas abiertas md"]},
+      {"usuario": "godooylauataro-ai", "mensajes": ["Update propuestas.md"]}
+    ]
+  },
+  "guias_y_templates_agregados": {
+    "issue_templates": [
+      ".github/ISSUE_TEMPLATE/consulta.md",
+      ".github/ISSUE_TEMPLATE/sugerencia.md",
+      ".github/ISSUE_TEMPLATE/error.md"
+    ],
+    "pr_template": ".github/PULL_REQUEST_TEMPLATE/pull_request.md",
+    "guia_buenas_practicas": "docs/guias/buenas-practicas.md"
+  },
+  "resumen": {
+    "total_estudiantes": 11,
+    "con_commits": 10,
+    "con_prs": 2,
+    "con_issues": 3,
+    "con_forks": 3,
+    "pr_abiertos": 3,
+    "pr_merged": 1
+  },
+  "pr_revision_pendiente": [
+    {
+      "numero": 3,
+      "titulo": "Ampliar investigación sobre hardware para Red Cóndor",
+      "autor": "pili848",
+      "creado": "2026-06-23",
+      "estado": "open",
+      "archivos_modificados": ["docs/etapas/equipo-3-hardware/"]
+    },
+    {
+      "numero": 4,
+      "titulo": "Actualizar investigación sobre hardware para Red Cóndor",
+      "autor": "pili848",
+      "creado": "2026-06-23",
+      "estado": "open",
+      "archivos_modificados": ["docs/etapas/equipo-3-hardware/"]
+    },
+    {
+      "numero": 5,
+      "titulo": "Expand technical questions for Equipo 3 hardware",
+      "autor": "pili848",
+      "creado": "2026-06-23",
+      "estado": "open",
+      "archivos_modificados": ["docs/etapas/equipo-3-hardware/"]
+    }
+  ]
+}
