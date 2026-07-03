@@ -148,6 +148,23 @@
       "areas_trabajo": []
     }
   ],
+  "calidad_commits": {
+    "buenos_commits_descriptivos": ["luisinafigueroaauza-cloud", "santiagobalverdi20-lang", "ailenv006-debug", "maguitayasmin1-hash", "valentinaguadalupeguzman9-code", "pardoezequiel810-eng"],
+    "commits_mejorables": [
+      {"usuario": "riverojuanmartin6-gif", "mensajes": [".", "INVESTIGACION.md", "INVESTIGACION.md", "INVESTIGACION.md", "Update investigacion.md"]},
+      {"usuario": "sofigam635-dotcom", "mensajes": ["preguntas abiertas md"]},
+      {"usuario": "godooylauataro-ai", "mensajes": ["Update propuestas.md"]}
+    ]
+  },
+  "guias_y_templates_agregados": {
+    "issue_templates": [
+      ".github/ISSUE_TEMPLATE/consulta.md",
+      ".github/ISSUE_TEMPLATE/sugerencia.md",
+      ".github/ISSUE_TEMPLATE/error.md"
+    ],
+    "pr_template": ".github/PULL_REQUEST_TEMPLATE/pull_request.md",
+    "guia_buenas_practicas": "docs/guias/buenas-practicas.md"
+  },
   "resumen": {
     "total_estudiantes": 11,
     "con_commits": 10,
