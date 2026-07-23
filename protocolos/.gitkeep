@@ -1,0 +1,47 @@
+# Protocolos Operativos de la Red Cóndor
+
+## 1. Propósito y Alcance
+
+Esta carpeta contiene el conjunto de **procedimientos operativos estandarizados** que garantizan el funcionamiento seguro, eficaz y coordinado de la Red Cóndor. Estos protocolos son la guía de actuación para todos los actores involucrados en el proyecto, desde los operadores del servidor hasta los equipos de respuesta a emergencias.
+
+El alcance de estos documentos cubre el ciclo de vida completo de la red, incluyendo:
+*   La **instalación y el mantenimiento** de la infraestructura (nodos, repetidores, gateways).
+*   La **gestión de alertas y la coordinación de rescates** con las entidades locales.
+*   La **capacitación y el soporte** a los usuarios finales (puesteros y crianceros).
+*   La **seguridad y privacidad** de los datos y comunicaciones.
+
+## 2. Importancia para el Proyecto
+
+La Red Cóndor no es solo un conjunto de dispositivos electrónicos; es un **sistema socio-técnico** cuyo éxito depende de que las personas sepan cómo usarlo y cómo responder ante una emergencia. Estos protocolos son el vínculo que convierte la tecnología en una **herramienta de salvamento confiable y operativa**.
+
+Su correcta implementación asegura que:
+*   Una alerta de un puestero siempre sea recibida y verificada.
+*   La información de localización (GPS) se transmita con precisión a los equipos de rescate.
+*   Los dispositivos funcionen en óptimas condiciones, incluso en el duro entorno de montaña.
+*   Se mantenga la confianza de los usuarios y de las instituciones colaboradoras.
+
+## 3. Estructura de los Protocolos
+
+Cada protocolo en esta carpeta se ha desarrollado siguiendo una estructura clara y práctica, incluyendo:
+*   **Objetivo:** Qué se busca lograr con el procedimiento.
+*   **Responsables:** Quiénes ejecutan cada paso.
+*   **Procedimiento:** Pasos detallados y secuenciales (listas de verificación, flujos de trabajo).
+*   **Anexos:** Plantillas, formularios o materiales de referencia.
+
+## 4. Protocolos Incluidos
+
+A continuación, se enumeran los procedimientos documentados en esta carpeta. Cada uno aborda un aspecto crítico de la operación de la red:
+
+1.  **Protocolo de Activación de Alerta y Respuesta a Emergencias:** Define el flujo de comunicación desde que un puestero envía una alerta hasta la activación de los recursos de rescate (Gendarmería, Policía, Defensa Civil, Aeropuerto), asegurando una respuesta rápida y coordinada.
+2.  **Protocolo de Instalación y Mantenimiento de Nodos y Repetidores:** Establece los estándares para la colocación, puesta en marcha y revisión periódica de todos los componentes de la red (paneles solares, baterías, antenas), para maximizar su autonomía y vida útil.
+3.  **Protocolo de Capacitación y Uso para Usuarios:** Contiene la guía visual y práctica para los puesteros y crianceros, explicando el manejo del nodo móvil, el envío de mensajes y el uso del botón de alerta. Incluye un plan de simulacros anuales.
+4.  **Protocolo de Gestión de Datos y Privacidad:** Detalla las políticas de acceso, almacenamiento y confidencialidad de la información generada por la red (ubicación de los usuarios, mensajes), garantizando el respeto a su privacidad.
+
+## 5. Revisión y Mejora Continua
+
+Estos protocolos son documentos vivos. Se revisarán y actualizarán periódicamente a partir de:
+*   La experiencia obtenida en simulacros y operaciones reales.
+*   Los comentarios de los usuarios y los equipos de rescate.
+*   Los avances tecnológicos y las lecciones aprendidas durante la implementación del proyecto.
+
+Toda modificación deberá ser registrada en el historial de cambios del repositorio para mantener la trazabilidad y la transparencia.
