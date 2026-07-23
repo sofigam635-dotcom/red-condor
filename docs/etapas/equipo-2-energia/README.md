@@ -69,5 +69,5 @@ El diseño energético propuesto es técnicamente viable, pero presenta riesgos 
 ---
 
 **Responsables:** Equipo 2 - Energía  
-**Última actualización:** [Fecha actual]  
+**Última actualización:** [23/07/2026]  
 **Estado:** En desarrollo
