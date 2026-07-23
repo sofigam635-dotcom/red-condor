@@ -1,113 +1,109 @@
 # Propuestas de Aplicaciones para Red Cóndor
 ## Equipo 2: Energía
 
-Basado en la investigación realizada sobre paneles solares, baterías, consumo del ESP32 y dimensionamiento de autonomía, proponemos las siguientes aplicaciones concretas para el **Proyecto Red Cóndor**. Estas propuestas conectan la tecnología de energía autónoma con las necesidades reales de usuarios en zonas rurales y de montaña de Malargüe y alrededores (puestos, rescatistas, Defensa Civil).
+Basado en la investigación sobre paneles solares, baterías, consumo del ESP32 y dimensionamiento de autonomía, proponemos las siguientes aplicaciones para el **Proyecto Red Cóndor**. Las propuestas buscan conectar energía autónoma con necesidades reales de puestos rurales, rescatistas y Defensa Civil en la zona de Malargüe y alrededores.
 
 ---
 
-## 1. Nodos Sensores Autónomos Solares para Puestos Rurales (Productores Aislados)
+## 1. Nodos Sensores Autónomos Solares para Puestos Rurales
+
 **Descripción:**  
-Dispositivos compactos alimentados por **panel monocristalino de 5-10 W + batería LiFePO4 de 10-30 Ah** con ESP32 en deep sleep + sensores ambientales (temperatura, humedad, presión, humedad de suelo) y módulo LoRa. 
+Dispositivos compactos alimentados por panel monocristalino de 5-10 W + batería LiFePO4 de 10-30 Ah, con ESP32 en deep sleep, sensores ambientales (temperatura, humedad, presión, humedad de suelo) y módulo LoRa.
 
-**Funcionalidad para el usuario:**
-- Monitoreo continuo de condiciones agroclimáticas (heladas, sequía, viento fuerte).
-- Alertas automáticas vía red LoRa/radioenlaces a puestos vecinos o central de Defensa Civil.
-- Datos históricos para planificación de siembras, pastoreo o protección de animales.
+**Funcionalidad:**  
+- Monitoreo de condiciones agroclimáticas (heladas, sequía, viento).  
+- Alertas vía LoRa a puestos vecinos o central.  
+- Datos históricos para planificación de siembras o protección de animales.
 
-**Ventajas energéticas:**
-- Autonomía de **4-7 días** sin sol (dimensionada para inviernos de Malargüe).
-- Mantenimiento casi nulo (panel orientado norte a 35-40°, batería protegida del frío).
-- Costo operativo muy bajo a 5-10 años (LiFePO4 dura miles de ciclos).
-
-**Ejemplo de dimensionamiento:**  
-Consumo estimado ~0.1-0.3 Wh/día → Panel 10 W + batería 20 Ah LiFePO4 + MPPT pequeño → Sistema completo < USD 150-250 (estimado, dependiendo de proveedores locales).
+**Consideraciones energéticas:**  
+- El consumo estimado de 0,1–0,3 Wh/día solo es alcanzable con transmisiones muy poco frecuentes y hardware bien optimizado. Sin mediciones reales de consumo este valor es una estimación optimista.  
+- Autonomía teórica de 4-7 días sin sol. En inviernos de Malargüe (días cortos, nubes y nieve) la autonomía real puede ser menor.  
+- Las LiFePO4 no se pueden cargar de forma segura por debajo de 0 °C. Se requiere aislamiento térmico o calentamiento activo, lo que reduce la autonomía neta.  
+- Costo estimado de prototipo de laboratorio: USD 150-250. Un equipo robusto de campo (carcasa IP67 real, BMS de calidad, montaje resistente) probablemente supere ese rango en Argentina.
 
 ---
 
-## 2. Estaciones de Monitoreo para Rescate y Defensa Civil en Zonas de Montaña
+## 2. Estaciones de Monitoreo para Rescate y Defensa Civil
+
 **Descripción:**  
-Nodos más robustos con **panel de 10-20 W**, batería LiFePO4 de 30-60 Ah (o mayor), carcasa IP67 resistente a frío, viento y nieve, equipados con:
-- Sensores ambientales + GPS.
-- Posible cámara low-power o sensor de movimiento (para detección de avalanchas, animales o personas extraviadas).
-- Transmisión LoRa + posibilidad de radioenlace punto a punto.
+Nodos más robustos con panel de 10-20 W, batería LiFePO4 de 30-60 Ah (o mayor), carcasa IP67, sensores ambientales + GPS, y posible sensor de movimiento. Transmisión LoRa y/o radioenlace punto a punto.
 
-**Uso principal:**
-- Datos en tiempo real para equipos de rescate (ubicación, condiciones meteo, riesgo de aludes).
-- Monitoreo de ríos, caminos de montaña o zonas de alto riesgo.
-- Apoyo a Defensa Civil para toma de decisiones (alertas tempranas).
+**Uso principal:**  
+- Datos de condiciones meteo y ubicación para equipos de rescate.  
+- Monitoreo de ríos, caminos y zonas de riesgo.  
+- Apoyo a alertas tempranas de Defensa Civil.
 
-**Características energéticas clave:**
-- Sobredimensionamiento para **5+ días de autonomía** + heater de batería opcional.
-- Posibilidad de agregar pequeño panel eólico complementario en sitios ventosos (común en Malargüe).
-- Monitoreo remoto del estado de la batería y producción solar (reportado junto con datos ambientales).
+**Consideraciones energéticas:**  
+- Se recomienda sobredimensionar la batería o el panel respecto a los nodos de puesto.  
+- 5 días de autonomía debe tomarse como un objetivo mínimo, no como garantía, especialmente en inviernos con varios días nublados o con nieve sobre el panel.  
+- El calentamiento de la batería en temperaturas bajo cero es un punto crítico a resolver en el prototipo.  
+- Monitoreo remoto del estado de batería y producción solar es altamente recomendable.
 
 ---
 
-## 3. Gateway / Repetidor Principal con Energía de Mayor Capacidad
+## 3. Gateway / Repetidor Principal
+
 **Descripción:**  
-Nodo concentrador ubicado en punto estratégico elevado (buena visibilidad solar y radio). 
-- **Panel solar:** 30-80 W monocristalino (o array pequeño).
-- **Batería:** 100-200+ Ah LiFePO4 o banco modular.
-- ESP32 o ESP32-S3 + LoRa gateway (recibe de decenas de nodos periféricos) + radioenlace hacia infraestructura central o internet (si disponible en algún punto).
-- Posible integración con repetidor de Equipo Comunicaciones.
+Nodo concentrador en punto elevado con buena visibilidad solar y radio.  
+- Panel: 30-80 W  
+- Batería: 100-200+ Ah LiFePO4  
+- ESP32 o ESP32-S3 + gateway LoRa + posible radioenlace hacia infraestructura central.
 
-**Justificación energética:**
-- Mayor consumo por estar siempre "escuchando" o procesando más datos.
-- Permite centralizar información de toda la red de nodos y enviarla de forma eficiente.
-- Redundancia: sistema híbrido solar + posible generador portátil de respaldo para emergencias prolongadas.
+**Justificación:**  
+Mayor consumo por estar más tiempo activo o procesando datos de varios nodos. Actúa como punto de concentración de la red.
 
-**Beneficio para Red Cóndor:**  
-Actúa como "columna vertebral" energética y de comunicaciones, permitiendo que los nodos de campo sean ultra-bajos consumo.
+**Consideraciones:**  
+- Requiere diseño más cuidadoso de la autonomía y posible respaldo (generador portátil) para emergencias prolongadas.  
+- Debe reportar su propio estado de batería y salud del sistema.
 
 ---
 
-## 4. Sistemas Híbridos Solares + Eólicos para Zonas de Alta Variabilidad
+## 4. Sistemas Híbridos Solares + Eólicos (opcional)
+
 **Descripción:**  
-En sitios con buen recurso eólico (característico de algunas áreas de Malargüe y pre-cordillera), complementar el panel solar con un **pequeño aerogenerador de 50-200 W** + regulador híbrido.
+Complementar el panel solar con un pequeño aerogenerador (50-200 W) en sitios con buen recurso eólico.
 
-**Ventajas:**
-- Mayor producción en invierno (cuando hay más viento y menos sol).
-- Mayor resiliencia ante periodos nublados prolongados.
-- Ideal para gateways o estaciones críticas de Defensa Civil.
-
-**Nota:** Requiere estudio de recurso eólico local, pero es una propuesta de valor agregado para la siguiente etapa del proyecto.
+**Observaciones:**  
+Es una opción secundaria. Los aerogeneradores pequeños agregan partes móviles, vibración y mantenimiento. En la mayoría de los casos de nodos de bajo consumo, un panel más grande o más capacidad de batería suele ser más simple y confiable. Solo se recomienda si se confirma buen recurso eólico local y se acepta el costo de mantenimiento extra.
 
 ---
 
-## 5. Aplicaciones Transversales y de Valor Agregado
-- **Monitoreo de infraestructura crítica:** Sensores de vibración/nivel en represas, canales o caminos remotos (alimentados con el mismo esquema de energía autónoma).
-- **Apoyo al turismo y astronomía:** Estaciones meteo de bajo impacto visual para zonas de alto valor turístico/astronómico cerca de Malargüe (baja contaminación lumínica), con datos públicos vía dashboard web (ver Equipo Infraestructura).
-- **Educación y capacitación:** Kits didácticos portátiles de energía solar + ESP32 para capacitar a productores rurales o equipos de rescate en el uso y mantenimiento básico del sistema.
-- **Expansión futura:** Diseño modular que permita agregar fácilmente más sensores o capacidad de batería/panel según necesidades detectadas en campo.
+## 5. Aplicaciones Transversales
+
+- Monitoreo de infraestructura crítica (vibración/nivel en represas, canales o caminos remotos).  
+- Estaciones meteo de bajo impacto para zonas de valor turístico/astronómico.  
+- Kits didácticos de energía solar + ESP32 para capacitación de productores y rescatistas.  
+- Diseño modular que permita aumentar batería o panel según resultados de campo.
 
 ---
 
-## Beneficios Generales para el Proyecto Red Cóndor
-| Aspecto                  | Beneficio de la propuesta de energía |
-|--------------------------|--------------------------------------|
-| **Autonomía**            | Nodos 100% independientes de red eléctrica (inexistente en la zona) |
-| **Mantenimiento**        | Mínimo (5-10 años sin intervención mayor gracias a LiFePO4 + deep sleep) |
-| **Costo a largo plazo**  | Bajo (evita generadores a combustible, baterías de plomo de corta vida) |
-| **Escalabilidad**        | Fácil agregar nodos nuevos sin infraestructura eléctrica |
-| **Sostenibilidad**       | 100% renovable, alineado con objetivos ambientales de áreas naturales |
-| **Fiabilidad en frío**   | Diseñado específicamente para inviernos de Malargüe (LiFePO4 + protección térmica) |
-| **Integración**          | Compatible con LoRa/radioenlaces (Equipo 1), hardware ESP32 (Equipo 3), usuarios reales (Equipo 4) e infraestructura backend (Equipo 5) |
+## Beneficios y Limitaciones
+
+| Aspecto              | Comentario |
+|----------------------|----------|
+| **Autonomía**        | Independiente de la red eléctrica. La autonomía real en invierno depende fuertemente del manejo del frío y de la nieve sobre el panel. |
+| **Mantenimiento**    | Bajo, pero no nulo. Requiere visitas periódicas o telemetría del estado del sistema. |
+| **Costo**            | Bajo a mediano plazo si se evita generadores a combustible. El costo inicial de un equipo robusto puede superar las estimaciones de prototipo. |
+| **Escalabilidad**    | Buena, siempre que se resuelva el consumo real y el comportamiento en frío. |
+| **Fiabilidad en frío** | Punto crítico. Las LiFePO4 necesitan estrategia clara de protección térmica para poder cargarse. |
+| **Integración**      | Compatible con LoRa, ESP32 y el resto de los equipos del proyecto. |
 
 ---
 
 ## Recomendaciones para la Siguiente Etapa (Prototipado)
-1. **Prototipo inicial:** Construir 2-3 nodos de prueba con:
-   - ESP32 + LoRa + BME280
-   - Panel monocristalino 10 W
-   - Batería LiFePO4 20-30 Ah + MPPT
-   - Medir consumo real durante 1-2 semanas (incluyendo días nublados simulados).
-2. Validar orientación e inclinación en sitio real o con simulación.
-3. Coordinar con Equipo Comunicaciones para definir perfil de tráfico LoRa y consumo asociado.
-4. Documentar costos reales en Argentina y proveedores recomendados.
-5. Elaborar manual simple de instalación y mantenimiento para usuarios finales (puestos, rescatistas).
 
-Estas propuestas demuestran que es **totalmente viable y altamente recomendable** implementar un sistema de energía solar autónoma de bajo consumo para Red Cóndor, permitiendo llevar conectividad, monitoreo ambiental y apoyo a rescate a zonas donde hoy no existe ninguna infraestructura tecnológica.
+1. **Prioridad 1:** Construir 2-3 prototipos y **medir el consumo real** durante al menos 1-2 semanas (incluyendo condiciones de frío y baja insolación).  
+2. Resolver de forma explícita el problema de carga de LiFePO4 bajo 0 °C (calentamiento, aislamiento o batería con calentador integrado).  
+3. Validar orientación e inclinación del panel en sitio real o con simulación de invierno.  
+4. Coordinar con Equipo Comunicaciones el perfil de tráfico LoRa (frecuencia e impacto en consumo).  
+5. Documentar costos reales de componentes en Argentina (no solo estimaciones de laboratorio).  
+6. Elaborar un manual simple de instalación y mantenimiento orientado a usuarios finales.
 
 ---
 
-*Documento elaborado por Equipo 2 - Energía | Proyecto Red Cóndor | Junio 2026*
+**Nota final:**  
+Las propuestas son técnicamente viables, pero dependen de mediciones reales de consumo y de una solución concreta al problema de carga en frío. Se recomienda avanzar a prototipos instrumentados antes de escalar o presentar números definitivos de autonomía y costo.
+
+---
+
+*Documento revisado – Equipo 2 Energía | Proyecto Red Cóndor*
