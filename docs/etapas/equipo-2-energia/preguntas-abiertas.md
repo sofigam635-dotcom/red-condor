@@ -49,5 +49,5 @@ Estamos haciendo muchas preguntas teóricas sin haber validado lo más básico. 
 
 ---
 
-**Última actualización:** [Inserte fecha]  
+**Última actualización:** [23/07/2026]  
 **Responsable:** Equipo 2 - Energía
