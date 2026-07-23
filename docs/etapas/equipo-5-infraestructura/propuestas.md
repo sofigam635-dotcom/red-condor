@@ -1,27 +1,35 @@
-# Propuestas para Red Condor Infraestructura
+# Propuestas y Especificaciones Técnicas - Equipo 5
 
-## Arquitectura Recomendada
-1. **Gateway (Bardas Blancas + redundantes)**: PC reciclada + Docker Compose con:
-   - Meshtastic Python API (recepción LoRa)
-   - Mosquitto MQTT
-   - Node-RED (lógica y alertas)
-   - InfluxDB (almacenamiento local)
-   - Grafana (visualización local)
+Este documento define las especificaciones mecánicas, la estandarización de componentes, los mecanismos de autorecuperación por software y el plan de trabajo por fases para la infraestructura de la Red Cóndor.
 
-2. **Servidor Central (Colegio San José)**: Recibe vía MQTT/Tailscale, consolida datos, dashboards principales y escalamiento de alertas.
+## 1. Estandarización de Gabinetes Exteriores y Nodos Repetidores (IP67)
 
-3. **Flujo de Datos**:
-   - Nodo LoRa → Gateway → MQTT → Node-RED → InfluxDB + Alertas (Telegram/Email)
-   - Grafana consume InfluxDB para mapas de posición, telemetría de batería, cobertura RF (RSSI/SNR).
+Todo equipo expuesto a la intemperie en alta montaña debe ajustarse a los siguientes requisitos constructivos:
 
-## Beneficios Educativos
-- **Estudiantes**: Aprenden Docker, Linux CLI, flujos visuales, bases de series temporales, visualización de datos reales.
-- **Integración**: Dashboard con mapa de cobertura, estado de nodos, historial de alertas.
+1. **Envolvente Exterior:** Cajas estancas con certificación IP67 mínima, construidas en poliéster reforzado con fibra de vidrio o policarbonato con pintura blanca reflectante resistente a radiación UV.
+2. **Sellado e Interfaces:** Prensaestopas metálicos con junta tórica y conectores coaxiales (SMA/N) sellados con manguito termocontraíble con resina.
+3. **Protección Contra Descargas:** Descargador de sobretensiones gaseoso (Gas Discharge Tube) en la línea de antena, conectado a jabalina de puesta a tierra dedicada.
+4. **Compartimento Térmico Subterráneo / Aislado:** Baterías LiFePO4 alojadas en un compartimento interno recubierto con aislante térmico (poliestireno expandido o aerogel), separado de las paredes exteriores del gabinete.
 
-## Próximos Pasos Propuestos (Etapa 4)
-- Instalar Docker + Compose en servidor de pruebas.
-- Probar stack completo con datos simulados de Meshtastic.
-- Crear docker-compose.yml base (documentar en repo).
-- Dashboard MVP: Mapa GPS + medidores de batería + tabla de últimos mensajes.
+## 2. Estrategia de Autorecuperación de Hardware y Sistema (Watchdog)
 
-Esta propuesta es **resiliente** (almacenamiento local en gateways) y **escalable**, alineada con las Hipótesis y Capas del documento de contexto.
+Para prevenir fallos catastróficos o congelamientos en nodos y gateways remotos sin acceso presencial:
+
+* **Restablecimiento por Energía:** Configuración obligatoria del parámetro de BIOS `Restore AC Power Loss = Power On` en plataformas x86.
+* **Watchdog del Kernel:** Activación del dispositivo de perro de guardia del sistema operativo (`/dev/watchdog`) en Linux Debian.
+* **Script de Monitoreo e Invocación de Redundancia:**
+
+```bash
+#!/bin/bash
+# Script de monitoreo de conectividad para el Gateway Red Cóndor
+LOG_PATH="/var/log/watchdog_redcondor.log"
+BROKER_IP="127.0.0.1"
+# Verificar estado de la VPN Tailscale y Broker MQTT
+if ! systemctl is-active --quiet tailscaled; then
+    echo "$(date '+%Y-%m-%d %H:%M:%S'): Servicio Tailscale caído. Reiniciando..." >> $LOG_PATH
+    systemctl restart tailscaled
+fi
+if ! nc -z $BROKER_IP 1883; then
+    echo "$(date '+%Y-%m-%d %H:%M:%S'): Broker MQTT inaccesible. Reiniciando contendores..." >> $LOG_PATH
+    cd /opt/redcondor && docker-compose restart mosquitto
+fi
